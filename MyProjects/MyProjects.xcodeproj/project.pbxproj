@@ -21,6 +21,8 @@
 		494BF0C9270779C80054C43C /* ToolbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0C8270779C80054C43C /* ToolbarButtonView.swift */; };
 		494BF0CE27078C830054C43C /* EditToolbarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0CD27078C830054C43C /* EditToolbarContentView.swift */; };
 		494BF0D027078D1F0054C43C /* ProjectsToolbarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0CF27078D1F0054C43C /* ProjectsToolbarContentView.swift */; };
+		494BF0D227078F330054C43C /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0D127078F330054C43C /* ProjectsView.swift */; };
+		494BF0D4270790D80054C43C /* ProjectCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0D3270790D80054C43C /* ProjectCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		494BF0C8270779C80054C43C /* ToolbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButtonView.swift; sourceTree = "<group>"; };
 		494BF0CD27078C830054C43C /* EditToolbarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToolbarContentView.swift; sourceTree = "<group>"; };
 		494BF0CF27078D1F0054C43C /* ProjectsToolbarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsToolbarContentView.swift; sourceTree = "<group>"; };
+		494BF0D127078F330054C43C /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		494BF0D3270790D80054C43C /* ProjectCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 		494BF0CB27078A4A0054C43C /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				494BF0D127078F330054C43C /* ProjectsView.swift */,
+				494BF0D3270790D80054C43C /* ProjectCellView.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 				490EDE1A2706535C0000716E /* YearLeftCellView.swift in Sources */,
 				494BF0C9270779C80054C43C /* ToolbarButtonView.swift in Sources */,
 				494BF0D027078D1F0054C43C /* ProjectsToolbarContentView.swift in Sources */,
+				494BF0D227078F330054C43C /* ProjectsView.swift in Sources */,
+				494BF0D4270790D80054C43C /* ProjectCellView.swift in Sources */,
 				490EDE0A27064A1E0000716E /* YearRightCellView.swift in Sources */,
 				490EDE22270664620000716E /* TimeLineCollectionView.swift in Sources */,
 				490EDE1627064C0D0000716E /* ViewExtensions.swift in Sources */,
