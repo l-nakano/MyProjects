@@ -1,10 +1,3 @@
-//
-//  YearLeftCellView.swift
-//  MyProjects
-//
-//  Created by Lucas Yoshio Nakano on 30/09/21.
-//
-
 import SwiftUI
 
 struct YearLeftCellView: View {
@@ -15,20 +8,24 @@ struct YearLeftCellView: View {
         let widthSize = UIScreen.main.bounds.width
         let heightSize = UIScreen.main.bounds.height
         
-        HStack(alignment: .center, spacing: 0) {
+        HStack(spacing: 0) {
             Text(String(year))
-                .padding()
-                .font(.system(size: 100))
+                .padding(8)
+                .font(.system(size: 60))
                 .minimumScaleFactor(0.5)
                 .lineLimit(1)
-                .frame(width: widthSize * 0.4, height: heightSize * 0.3)
+                .frame(width: widthSize * 0.35, height: heightSize * 0.3)
                 .background(Color.black)
                 .foregroundColor(.white)
                 .cornerRadius(20, corners: [.topLeft, .bottomLeft])
-            Rectangle()
-                .frame(width: widthSize * 0.6, height: heightSize * 0.3)
-                .foregroundColor(.green)
-                .cornerRadius(20, corners: [.topRight, .bottomRight])
+            ZStack {
+                Rectangle()
+                    .foregroundColor(Color.blue)
+                Image(uiImage: UIImage(systemName: "photo")!)
+                    .resizable()
+            }
+            .frame(width: widthSize * 0.55, height: heightSize * 0.3)
+            .cornerRadius(20, corners: [.topRight, .bottomRight])
         }
     }
 }

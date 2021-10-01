@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  MyProjects
-//
-//  Created by Lucas Yoshio Nakano on 30/09/21.
-//
-
 import SwiftUI
 
 struct YearRightCellView: View {
@@ -15,17 +8,21 @@ struct YearRightCellView: View {
         let widthSize = UIScreen.main.bounds.width
         let heightSize = UIScreen.main.bounds.height
         
-        HStack(alignment: .center, spacing: 0) {
-            Rectangle()
-                .frame(width: widthSize * 0.6, height: heightSize * 0.3)
-                .foregroundColor(.green)
-                .cornerRadius(20, corners: [.topLeft, .bottomLeft])
+        HStack(spacing: 0) {
+            ZStack {
+                Rectangle()
+                    .foregroundColor(Color.blue)
+                Image(uiImage: UIImage(systemName: "photo")!)
+                    .resizable()
+            }
+            .frame(width: widthSize * 0.55, height: heightSize * 0.3)
+            .cornerRadius(20, corners: [.topLeft, .bottomLeft])
             Text(String(year))
-                .padding()
-                .font(.system(size: 100))
+                .padding(8)
+                .font(.system(size: 60))
                 .minimumScaleFactor(0.5)
                 .lineLimit(1)
-                .frame(width: widthSize * 0.4, height: heightSize * 0.3)
+                .frame(width: widthSize * 0.35, height: heightSize * 0.3)
                 .background(Color.black)
                 .foregroundColor(.white)
                 .cornerRadius(20, corners: [.topRight, .bottomRight])
