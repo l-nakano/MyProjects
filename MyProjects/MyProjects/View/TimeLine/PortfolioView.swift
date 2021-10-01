@@ -24,7 +24,7 @@ struct PortfolioView: View {
                 TimeLineCollectionView()
             }
             .toolbar {
-                ToolbarContentView()
+                MainToolbarContentView()
             }
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -36,3 +36,5 @@ struct PortfolioView_Previews: PreviewProvider {
         PortfolioView()
     }
 }
+
+
