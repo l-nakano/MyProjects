@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		490EDE0827064A1E0000716E /* MyProjectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE0727064A1E0000716E /* MyProjectsApp.swift */; };
-		490EDE0A27064A1E0000716E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE0927064A1E0000716E /* ContentView.swift */; };
+		490EDE0A27064A1E0000716E /* YearRightCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE0927064A1E0000716E /* YearRightCellView.swift */; };
 		490EDE0C27064A230000716E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490EDE0B27064A230000716E /* Assets.xcassets */; };
 		490EDE0F27064A230000716E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490EDE0E27064A230000716E /* Preview Assets.xcassets */; };
+		490EDE1627064C0D0000716E /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE1527064C0D0000716E /* ViewExtensions.swift */; };
+		490EDE1827064C260000716E /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE1727064C260000716E /* RoundedCorner.swift */; };
+		490EDE1A2706535C0000716E /* YearLeftCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE192706535C0000716E /* YearLeftCellView.swift */; };
+		490EDE22270664620000716E /* TimeLineCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE21270664620000716E /* TimeLineCollectionView.swift */; };
+		490EDE2427067A150000716E /* ConnectorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE2327067A140000716E /* ConnectorCellView.swift */; };
+		490EDE2627067B750000716E /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE2527067B750000716E /* PortfolioView.swift */; };
+		490EDE28270684A80000716E /* ToolbarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EDE27270684A70000716E /* ToolbarContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		490EDE0427064A1E0000716E /* MyProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490EDE0727064A1E0000716E /* MyProjectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsApp.swift; sourceTree = "<group>"; };
-		490EDE0927064A1E0000716E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		490EDE0927064A1E0000716E /* YearRightCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearRightCellView.swift; sourceTree = "<group>"; };
 		490EDE0B27064A230000716E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		490EDE0E27064A230000716E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		490EDE1527064C0D0000716E /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		490EDE1727064C260000716E /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		490EDE192706535C0000716E /* YearLeftCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearLeftCellView.swift; sourceTree = "<group>"; };
+		490EDE21270664620000716E /* TimeLineCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCollectionView.swift; sourceTree = "<group>"; };
+		490EDE2327067A140000716E /* ConnectorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectorCellView.swift; sourceTree = "<group>"; };
+		490EDE2527067B750000716E /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		490EDE27270684A70000716E /* ToolbarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,9 @@
 		490EDE0627064A1E0000716E /* MyProjects */ = {
 			isa = PBXGroup;
 			children = (
+				490EDE1E270663150000716E /* Functionalities */,
+				490EDE1B270662DA0000716E /* Scenes */,
 				490EDE0727064A1E0000716E /* MyProjectsApp.swift */,
-				490EDE0927064A1E0000716E /* ContentView.swift */,
 				490EDE0B27064A230000716E /* Assets.xcassets */,
 				490EDE0D27064A230000716E /* Preview Content */,
 			);
@@ -65,6 +80,60 @@
 				490EDE0E27064A230000716E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		490EDE1B270662DA0000716E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				490EDE1C270662E00000716E /* TimeLineOverview */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		490EDE1C270662E00000716E /* TimeLineOverview */ = {
+			isa = PBXGroup;
+			children = (
+				490EDE1D270662FD0000716E /* View */,
+			);
+			path = TimeLineOverview;
+			sourceTree = "<group>";
+		};
+		490EDE1D270662FD0000716E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				490EDE192706535C0000716E /* YearLeftCellView.swift */,
+				490EDE0927064A1E0000716E /* YearRightCellView.swift */,
+				490EDE21270664620000716E /* TimeLineCollectionView.swift */,
+				490EDE2327067A140000716E /* ConnectorCellView.swift */,
+				490EDE2527067B750000716E /* PortfolioView.swift */,
+				490EDE27270684A70000716E /* ToolbarContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		490EDE1E270663150000716E /* Functionalities */ = {
+			isa = PBXGroup;
+			children = (
+				490EDE20270663480000716E /* Shapes */,
+				490EDE1F2706631D0000716E /* Extensions */,
+			);
+			path = Functionalities;
+			sourceTree = "<group>";
+		};
+		490EDE1F2706631D0000716E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				490EDE1527064C0D0000716E /* ViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		490EDE20270663480000716E /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				490EDE1727064C260000716E /* RoundedCorner.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +206,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				490EDE0A27064A1E0000716E /* ContentView.swift in Sources */,
+				490EDE1827064C260000716E /* RoundedCorner.swift in Sources */,
+				490EDE1A2706535C0000716E /* YearLeftCellView.swift in Sources */,
+				490EDE0A27064A1E0000716E /* YearRightCellView.swift in Sources */,
+				490EDE22270664620000716E /* TimeLineCollectionView.swift in Sources */,
+				490EDE1627064C0D0000716E /* ViewExtensions.swift in Sources */,
+				490EDE2427067A150000716E /* ConnectorCellView.swift in Sources */,
 				490EDE0827064A1E0000716E /* MyProjectsApp.swift in Sources */,
+				490EDE2627067B750000716E /* PortfolioView.swift in Sources */,
+				490EDE28270684A80000716E /* ToolbarContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
