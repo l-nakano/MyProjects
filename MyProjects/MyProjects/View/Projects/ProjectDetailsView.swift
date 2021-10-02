@@ -9,9 +9,13 @@ struct ProjectDetailsView: View {
                 .resizable()
                 .frame(width: ScreenSize.width * 0.5)
                 .aspectRatio(227/185, contentMode: .fit)
-                .padding([.top, .bottom], 40)
+                .padding([.top, .bottom], 20)
+            Text("Título do Projeto")
+                .font(.largeTitle)
+                .bold()
+            Text(String(projectYear))
             LinksStackView()
-            ProjectBodyDetails(projectYear: 2021)
+            ProjectBodyDetails()
         }
     }
 }

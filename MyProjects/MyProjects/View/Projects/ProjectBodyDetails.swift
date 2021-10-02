@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct ProjectBodyDetails: View {
-    let projectYear: Int
-    
     var body: some View {
         VStack {
-            ProjectTitleText(text: "Título do Projeto")
-            BodyText(text: String(projectYear))
             TitleText(text: "Descrição")
             BodyText(text: "Lorem ipsum dolor sit amet consectetur adipiscing elit.\nLorem ipsum dolor sit amet consectetur adipiscing elit.")
             TitleText(text: "Tecnologias")
@@ -26,17 +22,6 @@ struct ProjectBodyDetails: View {
     }
 }
 
-struct ProjectTitleText: View {
-    let text: String
-    
-    var body: some View {
-        Text(text)
-            .font(.largeTitle)
-            .bold()
-            .frame(width: ScreenSize.width * 0.8, alignment: .leading)
-    }
-}
-
 struct TitleText: View {
     let text: String
     
@@ -45,6 +30,7 @@ struct TitleText: View {
             .font(.title)
             .bold()
             .frame(width: ScreenSize.width * 0.8, alignment: .leading)
+            .padding([.top, .bottom], 8)
     }
 }
 
@@ -59,6 +45,6 @@ struct BodyText: View {
 
 struct ProjectBodyDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectBodyDetails(projectYear: 2021)
+        ProjectBodyDetails()
     }
 }
