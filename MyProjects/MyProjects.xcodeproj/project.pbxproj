@@ -23,6 +23,11 @@
 		494BF0D027078D1F0054C43C /* ProjectsToolbarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0CF27078D1F0054C43C /* ProjectsToolbarContentView.swift */; };
 		494BF0D227078F330054C43C /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0D127078F330054C43C /* ProjectsView.swift */; };
 		494BF0D4270790D80054C43C /* ProjectCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0D3270790D80054C43C /* ProjectCellView.swift */; };
+		494BF0D62707C0C50054C43C /* ProjectDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0D52707C0C50054C43C /* ProjectDetailsView.swift */; };
+		494BF0D92707C27D0054C43C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0D82707C27D0054C43C /* Constants.swift */; };
+		494BF0DD2707CACE0054C43C /* LinkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0DC2707CACE0054C43C /* LinkButtonView.swift */; };
+		494BF0DF2707D5380054C43C /* LinksStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0DE2707D5380054C43C /* LinksStackView.swift */; };
+		494BF0E12707D8260054C43C /* ProjectBodyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0E02707D8260054C43C /* ProjectBodyDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		494BF0CF27078D1F0054C43C /* ProjectsToolbarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsToolbarContentView.swift; sourceTree = "<group>"; };
 		494BF0D127078F330054C43C /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		494BF0D3270790D80054C43C /* ProjectCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCellView.swift; sourceTree = "<group>"; };
+		494BF0D52707C0C50054C43C /* ProjectDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsView.swift; sourceTree = "<group>"; };
+		494BF0D82707C27D0054C43C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		494BF0DC2707CACE0054C43C /* LinkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonView.swift; sourceTree = "<group>"; };
+		494BF0DE2707D5380054C43C /* LinksStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksStackView.swift; sourceTree = "<group>"; };
+		494BF0E02707D8260054C43C /* ProjectBodyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBodyDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +120,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		490EDE20270663480000716E /* Extras */ = {
+		490EDE20270663480000716E /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
 				490EDE1727064C260000716E /* RoundedCorner.swift */,
 			);
-			path = Extras;
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		494BF0C6270778AB0054C43C /* TimeLine */ = {
@@ -133,8 +143,9 @@
 		494BF0C7270778BD0054C43C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				490EDE20270663480000716E /* Extras */,
 				490EDE1F2706631D0000716E /* Extensions */,
+				494BF0DA2707C3C10054C43C /* Types */,
+				490EDE20270663480000716E /* Shapes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +155,10 @@
 			children = (
 				494BF0D127078F330054C43C /* ProjectsView.swift */,
 				494BF0D3270790D80054C43C /* ProjectCellView.swift */,
+				494BF0D52707C0C50054C43C /* ProjectDetailsView.swift */,
+				494BF0DC2707CACE0054C43C /* LinkButtonView.swift */,
+				494BF0DE2707D5380054C43C /* LinksStackView.swift */,
+				494BF0E02707D8260054C43C /* ProjectBodyDetails.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -151,12 +166,20 @@
 		494BF0CC27078A9D0054C43C /* Toolbar */ = {
 			isa = PBXGroup;
 			children = (
-				490EDE27270684A70000716E /* MainToolbarContentView.swift */,
 				494BF0C8270779C80054C43C /* ToolbarButtonView.swift */,
+				490EDE27270684A70000716E /* MainToolbarContentView.swift */,
 				494BF0CD27078C830054C43C /* EditToolbarContentView.swift */,
 				494BF0CF27078D1F0054C43C /* ProjectsToolbarContentView.swift */,
 			);
 			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		494BF0DA2707C3C10054C43C /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				494BF0D82707C27D0054C43C /* Constants.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,16 +256,21 @@
 				494BF0CE27078C830054C43C /* EditToolbarContentView.swift in Sources */,
 				490EDE1A2706535C0000716E /* YearLeftCellView.swift in Sources */,
 				494BF0C9270779C80054C43C /* ToolbarButtonView.swift in Sources */,
+				494BF0E12707D8260054C43C /* ProjectBodyDetails.swift in Sources */,
+				494BF0DD2707CACE0054C43C /* LinkButtonView.swift in Sources */,
 				494BF0D027078D1F0054C43C /* ProjectsToolbarContentView.swift in Sources */,
 				494BF0D227078F330054C43C /* ProjectsView.swift in Sources */,
 				494BF0D4270790D80054C43C /* ProjectCellView.swift in Sources */,
+				494BF0D92707C27D0054C43C /* Constants.swift in Sources */,
 				490EDE0A27064A1E0000716E /* YearRightCellView.swift in Sources */,
 				490EDE22270664620000716E /* TimeLineCollectionView.swift in Sources */,
 				490EDE1627064C0D0000716E /* ViewExtensions.swift in Sources */,
 				490EDE2427067A150000716E /* ConnectorCellView.swift in Sources */,
 				490EDE0827064A1E0000716E /* MyProjectsApp.swift in Sources */,
 				490EDE2627067B750000716E /* PortfolioView.swift in Sources */,
+				494BF0DF2707D5380054C43C /* LinksStackView.swift in Sources */,
 				490EDE28270684A80000716E /* MainToolbarContentView.swift in Sources */,
+				494BF0D62707C0C50054C43C /* ProjectDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

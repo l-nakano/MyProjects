@@ -8,7 +8,7 @@ struct ProjectCellView: View {
         Image(systemName: "photo")
             .resizable()
             .frame(width: screenWidth / numberOfColumns - 20)
-            .aspectRatio(1, contentMode: .fit)
+            .aspectRatio(185/227, contentMode: .fit)
     }
 }
 

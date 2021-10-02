@@ -2,10 +2,8 @@ import SwiftUI
 
 struct ConnectorCellView: View {
     var body: some View {
-        let widthSize = UIScreen.main.bounds.width
-        
         Rectangle()
-            .frame(width: widthSize * 0.01)
+            .frame(width: ScreenSize.width * 0.01)
             .aspectRatio(5, contentMode: .fit)
     }
 }
