@@ -1,10 +1,12 @@
 import SwiftUI
 
 struct ProjectsToolbarContentView: ToolbarContent {
+    @Binding var showingScreen: Screen
+    
     var body: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             ToolbarButtonView(systemImage: "chevron.backward.circle") {
-                print("Retornar")
+                showingScreen = .timeLine
             }
         }
         ToolbarItem(placement: .principal) {
