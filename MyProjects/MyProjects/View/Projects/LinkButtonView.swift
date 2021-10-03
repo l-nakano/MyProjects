@@ -9,7 +9,7 @@ struct LinkButtonView: View {
             Image(systemName: systemImage)
                 .resizable()
         }
-        .frame(width: .infinity)
+        .frame(width: nil)
         .aspectRatio(1, contentMode: .fit)
         .padding(8)
         .foregroundColor(.black)

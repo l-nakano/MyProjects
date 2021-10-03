@@ -1,19 +1,52 @@
 import SwiftUI
 
 struct TimeLineCollectionView: View {
-    var body: some View {        
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack(spacing: 0) {
-                ForEach(0..<5) { i in
-                    if i % 2 == 0 {
-                        YearRightCellView(year: i + 2000).onTapGesture { openProjectDetails() }
-                    }
-                    else {
-                        YearLeftCellView(year: i + 2000).onTapGesture { openProjectDetails() }
-                    }
-                    if i != 4 {
-                        ConnectorCellView()
-                    }
+    @Binding var showingScreen: Screen
+    
+    var body: some View {
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                TitleAndSubTitle
+                YearsCollectionView
+            }
+            .toolbar {
+                MainToolbarContentView()
+            }.navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    
+    var TitleAndSubTitle: some View {
+        VStack(spacing: 8) {
+            Text("Título do Portfólio")
+                .font(.largeTitle)
+                .bold()
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.5)
+                .lineLimit(2)
+                .padding([.leading, .trailing], 40)
+            Text("Qualquer breve descrição sobre o portfólio")
+                .font(.title2)
+                .italic()
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.5)
+                .lineLimit(2)
+                .padding([.leading, .trailing], 20)
+        }.padding([.top, .bottom], 90)
+    }
+    
+    var YearsCollectionView: some View {
+        VStack(spacing: 0) {
+            ForEach(0..<5) { i in
+                if i % 2 == 0 {
+                    YearRightCellView(year: i + 2000).onTapGesture {
+                        showingScreen = .projects }
+                }
+                else {
+                    YearLeftCellView(year: i + 2000).onTapGesture {
+                        showingScreen = .projects }
+                }
+                if i != 4 {
+                    ConnectorCellView()
                 }
             }
         }
@@ -22,6 +55,6 @@ struct TimeLineCollectionView: View {
 
 class TimeLineCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeLineCollectionView()
+        TimeLineCollectionView(showingScreen: .constant(.timeLine))
     }
 }

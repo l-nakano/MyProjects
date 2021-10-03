@@ -9,7 +9,7 @@ struct ProjectDetailsView: View {
                 .resizable()
                 .frame(width: ScreenSize.width * 0.5)
                 .aspectRatio(227/185, contentMode: .fit)
-                .padding([.top, .bottom], 20)
+                .padding([.top, .bottom], 40)
             Text("Título do Projeto")
                 .font(.largeTitle)
                 .bold()

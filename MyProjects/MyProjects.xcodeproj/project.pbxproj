@@ -28,6 +28,7 @@
 		494BF0DD2707CACE0054C43C /* LinkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0DC2707CACE0054C43C /* LinkButtonView.swift */; };
 		494BF0DF2707D5380054C43C /* LinksStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0DE2707D5380054C43C /* LinksStackView.swift */; };
 		494BF0E12707D8260054C43C /* ProjectBodyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0E02707D8260054C43C /* ProjectBodyDetails.swift */; };
+		49B2E4A1270937FE00520EC0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E4A0270937FE00520EC0 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		494BF0DC2707CACE0054C43C /* LinkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonView.swift; sourceTree = "<group>"; };
 		494BF0DE2707D5380054C43C /* LinksStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksStackView.swift; sourceTree = "<group>"; };
 		494BF0E02707D8260054C43C /* ProjectBodyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBodyDetails.swift; sourceTree = "<group>"; };
+		49B2E4A0270937FE00520EC0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				494BF0D82707C27D0054C43C /* Constants.swift */,
+				49B2E4A0270937FE00520EC0 /* Enums.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				490EDE1827064C260000716E /* RoundedCorner.swift in Sources */,
 				494BF0CE27078C830054C43C /* EditToolbarContentView.swift in Sources */,
+				49B2E4A1270937FE00520EC0 /* Enums.swift in Sources */,
 				490EDE1A2706535C0000716E /* YearLeftCellView.swift in Sources */,
 				494BF0C9270779C80054C43C /* ToolbarButtonView.swift in Sources */,
 				494BF0E12707D8260054C43C /* ProjectBodyDetails.swift in Sources */,
