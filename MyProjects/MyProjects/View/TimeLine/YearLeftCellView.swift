@@ -29,6 +29,7 @@ struct YearLeftCellView: View {
                     self.activeImageIndex = (self.activeImageIndex + 1) % images.count
                 }
         }
+        .shadow(radius: 10, x: 0, y: 10)
     }
 }
 

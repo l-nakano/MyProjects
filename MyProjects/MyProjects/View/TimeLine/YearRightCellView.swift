@@ -29,6 +29,7 @@ struct YearRightCellView: View {
                 .foregroundColor(.white)
                 .cornerRadius(20, corners: [.topRight, .bottomRight])
         }
+        .shadow(radius: 10, x: 0, y: 10)
     }
 }
 

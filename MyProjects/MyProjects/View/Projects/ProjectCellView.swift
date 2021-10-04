@@ -8,6 +8,7 @@ struct ProjectCellView: View {
             .resizable()
             .frame(width: nil)
             .aspectRatio(185/227, contentMode: .fit)
+            .shadow(radius: 2, x: 0, y: 5)
     }
 }
 
