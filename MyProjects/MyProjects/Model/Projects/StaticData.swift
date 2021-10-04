@@ -24,26 +24,6 @@ struct StaticData {
                 images: [Image(uiImage: UIImage(named: "HomePage")!), Image(uiImage: UIImage(named: "GameLayout")!), Image(uiImage: UIImage(named: "GameFinish")!)],
                 date: "02/08/2021",
                 repositoryLink: "https://github.com/lynakano/TimesUp",
-                videoLink: "https://youtu.be/MWB_1TDOyeQ"),
-            ProjectDetails(
-                title: "Time's Up! Quiz - Crash Challenge 2",
-                description: "Time's Up! Quiz é um app para ensinar e entreter, desenvolvendo o conhecimento e o raciocínio rápido dos jogadores. É um jogo de quiz contra o relógio!",
-                technologies: ["UIKit", "Swift"],
-                design: "Recursos simples, com poucas imagens e mais formas, que estarão presentes para encapsular alguma informação ou representá-la de forma visual. Paleta de cores clara. Utilizado o conceito de 60-30-10.",
-                process: "ENGAGE\n\nBig Idea: Educação\nEssential Question: Como unir educação e entretenimento de forma harmônica?\nChallenge: Desenvolver app de quiz com objetivo de ensinar e ao mesmo tempo divertir o usuário.\n\nQ&A\n\nEscolhido para formar um repossitório de questões de conhecimento geral.\n\nPROGRAMAÇÃO\n\nBaseado em estrutura MVC, utilizando UIKit e Singleton.\n\nREGRAS\n\nRegras feitas para dar dinâmica e não prejudicar muito o jogador ao errar alguma resposta.",
-                images: [Image(uiImage: UIImage(named: "HomePage")!), Image(uiImage: UIImage(named: "GameLayout")!), Image(uiImage: UIImage(named: "GameFinish")!)],
-                date: "02/08/2021",
-                repositoryLink: "https://github.com/lynakano/TimesUp",
-                videoLink: "https://youtu.be/MWB_1TDOyeQ"),
-            ProjectDetails(
-                title: "Time's Up! Quiz - Crash Challenge 2",
-                description: "Time's Up! Quiz é um app para ensinar e entreter, desenvolvendo o conhecimento e o raciocínio rápido dos jogadores. É um jogo de quiz contra o relógio!",
-                technologies: ["UIKit", "Swift"],
-                design: "Recursos simples, com poucas imagens e mais formas, que estarão presentes para encapsular alguma informação ou representá-la de forma visual. Paleta de cores clara. Utilizado o conceito de 60-30-10.",
-                process: "ENGAGE\n\nBig Idea: Educação\nEssential Question: Como unir educação e entretenimento de forma harmônica?\nChallenge: Desenvolver app de quiz com objetivo de ensinar e ao mesmo tempo divertir o usuário.\n\nQ&A\n\nEscolhido para formar um repossitório de questões de conhecimento geral.\n\nPROGRAMAÇÃO\n\nBaseado em estrutura MVC, utilizando UIKit e Singleton.\n\nREGRAS\n\nRegras feitas para dar dinâmica e não prejudicar muito o jogador ao errar alguma resposta.",
-                images: [Image(uiImage: UIImage(named: "HomePage")!), Image(uiImage: UIImage(named: "GameLayout")!), Image(uiImage: UIImage(named: "GameFinish")!)],
-                date: "02/08/2020",
-                repositoryLink: "https://github.com/lynakano/TimesUp",
                 videoLink: "https://youtu.be/MWB_1TDOyeQ")
         ])
 }
