@@ -1,3 +1,3 @@
 enum Screen {
-    case timeLine, projects, projectDetails
+    case timeLine, projects, projectDetails, projectInsert
 }

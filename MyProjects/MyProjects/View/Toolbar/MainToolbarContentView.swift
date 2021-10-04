@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct MainToolbarContentView: ToolbarContent {
+    @Binding var showingScreen: Screen
+    
     var body: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             ToolbarButtonView(systemImage: "square.and.arrow.up.circle") {
@@ -14,7 +16,7 @@ struct MainToolbarContentView: ToolbarContent {
         }
         ToolbarItem(placement: .navigationBarTrailing) {
             ToolbarButtonView(systemImage: "plus.circle") {
-                print("Adicionar")
+                showingScreen = .projectInsert
             }
         }
     }
