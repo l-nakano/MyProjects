@@ -22,6 +22,9 @@ struct ProjectsView: View {
                                 }) {
                                     ProjectDetailsView(project:  viewModel.projectsList[selectedProject])
                                 }
+                            } else {
+                                Rectangle()
+                                    .foregroundColor(.white)
                             }
                         }
                     }
