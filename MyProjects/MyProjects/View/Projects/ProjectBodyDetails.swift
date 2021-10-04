@@ -1,23 +1,21 @@
-//
-//  ProjectBodyDetails.swift
-//  MyProjects
-//
-//  Created by Lucas Yoshio Nakano on 01/10/21.
-//
-
 import SwiftUI
 
 struct ProjectBodyDetails: View {
+    var description: String
+    var design: String
+    var process: String
+    var technologies: [String]
+    
     var body: some View {
         VStack {
             TitleText(text: "Descrição")
-            BodyText(text: "Lorem ipsum dolor sit amet consectetur adipiscing elit.\nLorem ipsum dolor sit amet consectetur adipiscing elit.")
+            BodyText(text: description)
             TitleText(text: "Tecnologias")
-            BodyText(text: "Lorem ipsum dolor sit amet consectetur adipiscing elit.")
+            BodyText(text: technologies.joined(separator: ", "))
             TitleText(text: "Design")
-            BodyText(text: "Lorem ipsum dolor sit amet consectetur adipiscing elit.\nLorem ipsum dolor sit amet consectetur adipiscing elit.")
+            BodyText(text: design)
             TitleText(text: "Processo")
-            BodyText(text: "Lorem ipsum dolor sit amet consectetur adipiscing elit.")
+            BodyText(text: process)
         }
     }
 }
@@ -45,6 +43,6 @@ struct BodyText: View {
 
 struct ProjectBodyDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectBodyDetails()
+        ProjectBodyDetails(description: "Descrição do projeto", design: "Design do projeto", process: "Processos do projeto", technologies: ["Tech1", "Tech2"])
     }
 }

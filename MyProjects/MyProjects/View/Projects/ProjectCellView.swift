@@ -1,19 +1,18 @@
 import SwiftUI
 
 struct ProjectCellView: View {
-    let numberOfColumns: CGFloat!
-    let screenWidth = UIScreen.main.bounds.width
+    var project: ProjectDetails
     
     var body: some View {
-        Image(systemName: "photo")
+        project.images.first!
             .resizable()
-            .frame(width: screenWidth / numberOfColumns - 20)
+            .frame(width: nil)
             .aspectRatio(185/227, contentMode: .fit)
     }
 }
 
 struct ProjectCellView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectCellView(numberOfColumns: 3)
+        ProjectCellView(project: StaticData().portfolio.projects.first!)
     }
 }

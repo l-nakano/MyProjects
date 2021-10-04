@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PortfolioView: View {
     @State var showingScreen: Screen = .timeLine
+    @ObservedObject var viewModel = ProjectsListViewModel()
     
     var body: some View {
         switch showingScreen {
