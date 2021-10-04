@@ -4,7 +4,7 @@ import SwiftUI
 struct MyProjectsApp: App {
     var body: some Scene {
         WindowGroup {
-            PortfolioView()
+            PortfolioView(selectedYear: 2021)
         }
     }
 }

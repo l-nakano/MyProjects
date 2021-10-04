@@ -2,7 +2,9 @@ import SwiftUI
 
 struct TimeLineCollectionView: View {
     @Binding var showingScreen: Screen
-    @ObservedObject var viewModel = PortfoliosListViewModel()
+    @Binding var yearSelected: Int
+    
+    @ObservedObject var portfolioViewModel = PortfoliosListViewModel()
     
     var body: some View {
         NavigationView {
@@ -18,14 +20,14 @@ struct TimeLineCollectionView: View {
     
     var TitleAndSubTitle: some View {
         VStack(spacing: 8) {
-            Text(viewModel.portfoliosList.first!.title)
+            Text(portfolioViewModel.portfoliosList.first!.title)
                 .font(.largeTitle)
                 .bold()
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
                 .lineLimit(2)
                 .padding([.leading, .trailing], 40)
-            Text(viewModel.portfoliosList.first!.description)
+            Text(portfolioViewModel.portfoliosList.first!.description)
                 .font(.title2)
                 .italic()
                 .multilineTextAlignment(.center)
@@ -37,16 +39,20 @@ struct TimeLineCollectionView: View {
     
     var YearsCollectionView: some View {
         VStack(spacing: 0) {
-            ForEach(0..<5) { i in
+            ForEach(0..<portfolioViewModel.getYearsList.count) { i in
                 if i % 2 == 0 {
-                    YearRightCellView(year: i + 2000).onTapGesture {
-                        showingScreen = .projects }
+                    YearRightCellView(year: portfolioViewModel.getYearsList[i]).onTapGesture {
+                        yearSelected = portfolioViewModel.getYearsList[i]
+                        showingScreen = .projects
+                    }
                 }
                 else {
-                    YearLeftCellView(year: i + 2000).onTapGesture {
-                        showingScreen = .projects }
+                    YearLeftCellView(year: portfolioViewModel.getYearsList[i]).onTapGesture {
+                        yearSelected = portfolioViewModel.getYearsList[i]
+                        showingScreen = .projects
+                    }
                 }
-                if i != 4 {
+                if i != portfolioViewModel.getYearsList.count - 1 {
                     ConnectorCellView()
                 }
             }
@@ -56,6 +62,6 @@ struct TimeLineCollectionView: View {
 
 class TimeLineCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeLineCollectionView(showingScreen: .constant(.timeLine))
+        TimeLineCollectionView(showingScreen: .constant(.timeLine), yearSelected: .constant(2021))
     }
 }
