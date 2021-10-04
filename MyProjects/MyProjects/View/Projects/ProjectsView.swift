@@ -3,27 +3,35 @@ import SwiftUI
 struct ProjectsView: View {
     @Binding var showingScreen: Screen
     @State var isShowingDetail: Bool = false
+    @State var selectedProject: Int = 0
+    @ObservedObject var viewModel = ProjectsListViewModel()
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(0..<10) { i in
+                ForEach(0..<Int(ceil(Double(viewModel.projectsList.count) / 3.0))) { i in
                     HStack {
                         ForEach(0..<3) { j in
-                            ProjectCellView(numberOfColumns: 3).onTapGesture {
-                                isShowingDetail.toggle()
-                                showingScreen = .projectDetails
-                            }.sheet(isPresented: $isShowingDetail, onDismiss: {
-                                showingScreen = .projects
-                            }) {
-                                ProjectDetailsView(projectYear: 2021)
+                            if i * 3 + j < viewModel.projectsList.count {
+                                ProjectCellView(project: viewModel.projectsList[i * 3 + j]).onTapGesture {
+                                    selectedProject = i * 3 + j
+                                    isShowingDetail.toggle()
+                                    showingScreen = .projectDetails
+                                }.sheet(isPresented: $isShowingDetail, onDismiss: {
+                                    showingScreen = .projects
+                                }) {
+                                    ProjectDetailsView(project:  viewModel.projectsList[selectedProject])
+                                }
+                            } else {
+                                Rectangle()
+                                    .foregroundColor(.white)
                             }
                         }
                     }
                 }
             }
-            .frame(width: UIScreen.main.bounds.width)
             .padding(.top, 20)
+            .frame(width: ScreenSize.width * 0.9)
             .toolbar {
                 ProjectsToolbarContentView(showingScreen: $showingScreen)
             }.navigationBarTitleDisplayMode(.inline)

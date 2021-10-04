@@ -28,6 +28,10 @@
 		494BF0DD2707CACE0054C43C /* LinkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0DC2707CACE0054C43C /* LinkButtonView.swift */; };
 		494BF0DF2707D5380054C43C /* LinksStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0DE2707D5380054C43C /* LinksStackView.swift */; };
 		494BF0E12707D8260054C43C /* ProjectBodyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BF0E02707D8260054C43C /* ProjectBodyDetails.swift */; };
+		496AB5EC270A5AE2006AA238 /* PortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496AB5EB270A5AE2006AA238 /* PortfolioModel.swift */; };
+		496AB5EE270A6396006AA238 /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496AB5ED270A6396006AA238 /* StaticData.swift */; };
+		496AB5F8270A7B1A006AA238 /* ProjectsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496AB5F7270A7B1A006AA238 /* ProjectsListViewModel.swift */; };
+		496AB5FC270A7D57006AA238 /* PortfoliosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496AB5FB270A7D57006AA238 /* PortfoliosListViewModel.swift */; };
 		49B2E4A1270937FE00520EC0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E4A0270937FE00520EC0 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,10 @@
 		494BF0DC2707CACE0054C43C /* LinkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButtonView.swift; sourceTree = "<group>"; };
 		494BF0DE2707D5380054C43C /* LinksStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksStackView.swift; sourceTree = "<group>"; };
 		494BF0E02707D8260054C43C /* ProjectBodyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBodyDetails.swift; sourceTree = "<group>"; };
+		496AB5EB270A5AE2006AA238 /* PortfolioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioModel.swift; sourceTree = "<group>"; };
+		496AB5ED270A6396006AA238 /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
+		496AB5F7270A7B1A006AA238 /* ProjectsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewModel.swift; sourceTree = "<group>"; };
+		496AB5FB270A7D57006AA238 /* PortfoliosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfoliosListViewModel.swift; sourceTree = "<group>"; };
 		49B2E4A0270937FE00520EC0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +97,7 @@
 			children = (
 				494BF0C7270778BD0054C43C /* Model */,
 				490EDE1D270662FD0000716E /* View */,
+				496AB5F1270A6EB4006AA238 /* View Model */,
 				490EDE0727064A1E0000716E /* MyProjectsApp.swift */,
 				490EDE0B27064A230000716E /* Assets.xcassets */,
 				490EDE0D27064A230000716E /* Preview Content */,
@@ -145,6 +154,7 @@
 		494BF0C7270778BD0054C43C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				496AB5EA270A5AB1006AA238 /* Projects */,
 				490EDE1F2706631D0000716E /* Extensions */,
 				494BF0DA2707C3C10054C43C /* Types */,
 				490EDE20270663480000716E /* Shapes */,
@@ -183,6 +193,24 @@
 				49B2E4A0270937FE00520EC0 /* Enums.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		496AB5EA270A5AB1006AA238 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				496AB5EB270A5AE2006AA238 /* PortfolioModel.swift */,
+				496AB5ED270A6396006AA238 /* StaticData.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		496AB5F1270A6EB4006AA238 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				496AB5F7270A7B1A006AA238 /* ProjectsListViewModel.swift */,
+				496AB5FB270A7D57006AA238 /* PortfoliosListViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +285,10 @@
 			files = (
 				490EDE1827064C260000716E /* RoundedCorner.swift in Sources */,
 				494BF0CE27078C830054C43C /* EditToolbarContentView.swift in Sources */,
+				496AB5EC270A5AE2006AA238 /* PortfolioModel.swift in Sources */,
 				49B2E4A1270937FE00520EC0 /* Enums.swift in Sources */,
 				490EDE1A2706535C0000716E /* YearLeftCellView.swift in Sources */,
+				496AB5F8270A7B1A006AA238 /* ProjectsListViewModel.swift in Sources */,
 				494BF0C9270779C80054C43C /* ToolbarButtonView.swift in Sources */,
 				494BF0E12707D8260054C43C /* ProjectBodyDetails.swift in Sources */,
 				494BF0DD2707CACE0054C43C /* LinkButtonView.swift in Sources */,
@@ -270,11 +300,13 @@
 				490EDE22270664620000716E /* TimeLineCollectionView.swift in Sources */,
 				490EDE1627064C0D0000716E /* ViewExtensions.swift in Sources */,
 				490EDE2427067A150000716E /* ConnectorCellView.swift in Sources */,
+				496AB5FC270A7D57006AA238 /* PortfoliosListViewModel.swift in Sources */,
 				490EDE0827064A1E0000716E /* MyProjectsApp.swift in Sources */,
 				490EDE2627067B750000716E /* PortfolioView.swift in Sources */,
 				494BF0DF2707D5380054C43C /* LinksStackView.swift in Sources */,
 				490EDE28270684A80000716E /* MainToolbarContentView.swift in Sources */,
 				494BF0D62707C0C50054C43C /* ProjectDetailsView.swift in Sources */,
+				496AB5EE270A6396006AA238 /* StaticData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

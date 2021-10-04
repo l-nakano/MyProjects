@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TimeLineCollectionView: View {
     @Binding var showingScreen: Screen
+    @ObservedObject var viewModel = PortfoliosListViewModel()
     
     var body: some View {
         NavigationView {
@@ -17,14 +18,14 @@ struct TimeLineCollectionView: View {
     
     var TitleAndSubTitle: some View {
         VStack(spacing: 8) {
-            Text("Título do Portfólio")
+            Text(viewModel.portfoliosList.first!.title)
                 .font(.largeTitle)
                 .bold()
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
                 .lineLimit(2)
                 .padding([.leading, .trailing], 40)
-            Text("Qualquer breve descrição sobre o portfólio")
+            Text(viewModel.portfoliosList.first!.description)
                 .font(.title2)
                 .italic()
                 .multilineTextAlignment(.center)

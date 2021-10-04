@@ -1,27 +1,51 @@
 import SwiftUI
 
 struct LinksStackView: View {
+    let store,
+        repository,
+        design,
+        video: String
+    
     var body: some View {
         HStack {
-            LinkButtonView(systemImage: "bag.circle") {
-                print("Acesso Loja")
+            if store != "" {
+                LinkButtonView(systemImage: "bag.circle") {
+                    if let url = URL(string: store) {
+                        UIApplication.shared.open(url)
+                    }
+                }
             }
-            LinkButtonView(systemImage: "hammer.circle") {
-                print("Acesso Repositório Programação")
+            if repository != "" {
+                LinkButtonView(systemImage: "hammer.circle") {
+                    if let url = URL(string: repository) {
+                        UIApplication.shared.open(url)
+                    }
+                }
             }
-            LinkButtonView(systemImage: "photo.circle") {
-                print("Acesso Repositório Design")
+            if design != "" {
+                LinkButtonView(systemImage: "photo.circle") {
+                    if let url = URL(string: design) {
+                        UIApplication.shared.open(url)
+                    }
+                }
             }
-            LinkButtonView(systemImage: "play.circle") {
-                print("Acesso Vídeo")
+            if video != "" {
+                LinkButtonView(systemImage: "play.circle") {
+                    if let url = URL(string: video) {
+                        UIApplication.shared.open(url)
+                    }
+                }
             }
         }
-        .frame(maxWidth: ScreenSize.width * 0.6)
+        .frame(maxWidth: ScreenSize.width * 0.6, maxHeight: 50)
     }
 }
 
 struct LinksStackView_Previews: PreviewProvider {
     static var previews: some View {
-        LinksStackView()
+        LinksStackView(store: "",
+                       repository: StaticData().portfolio.projects.first!.repositoryLink,
+                       design: "",
+                       video: StaticData().portfolio.projects.first!.videoLink)
     }
 }
