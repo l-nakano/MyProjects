@@ -2,6 +2,7 @@ import Foundation
 
 class ProjectsListViewModel: ObservableObject {
     @Published var projectsList: [ProjectDetails] = StaticData().portfolio.projects
+    @Published var selectedProject: ProjectDetails = StaticData().portfolio.projects.first!
     
     func getProjectYear(_ project: ProjectDetails) -> Int {
         let formatter = DateFormatter()
