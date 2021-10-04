@@ -42,6 +42,7 @@ struct TimeLineCollectionView: View {
             ForEach(0..<portfolioViewModel.getYearsList.count) { i in
                 if i % 2 == 0 {
                     YearRightCellView(year: portfolioViewModel.getYearsList[i]).onTapGesture {
+                        print(portfolioViewModel.getYearsList)
                         yearSelected = portfolioViewModel.getYearsList[i]
                         showingScreen = .projects
                     }

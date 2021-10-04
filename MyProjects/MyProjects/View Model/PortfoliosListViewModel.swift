@@ -6,6 +6,6 @@ class PortfoliosListViewModel: ObservableObject {
     var getYearsList: [Int] {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy"
-        return self.portfoliosList.first!.projects.map { Int(formatter.string(from: $0.date))! }
+        return Array(Set(self.portfoliosList.first!.projects.map { Int(formatter.string(from: $0.date))! })).sorted().reversed()
     }
 }
