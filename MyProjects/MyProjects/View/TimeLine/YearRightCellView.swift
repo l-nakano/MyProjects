@@ -14,11 +14,11 @@ struct YearRightCellView: View {
         HStack(spacing: 0) {
             images[activeImageIndex]
                 .resizable()
-                .onReceive(imageSwitchTimer) { _ in
-                        self.activeImageIndex = (self.activeImageIndex + 1) % images.count
-                    }
                 .frame(width: ScreenSize.width * 0.55, height: ScreenSize.height * 0.3)
                 .cornerRadius(20, corners: [.topLeft, .bottomLeft])
+                .onReceive(imageSwitchTimer) { _ in
+                    self.activeImageIndex = (self.activeImageIndex + 1) % images.count
+                }
             Text(String(year))
                 .padding(8)
                 .font(.system(size: 60))

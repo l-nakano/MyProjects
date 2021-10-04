@@ -23,11 +23,11 @@ struct YearLeftCellView: View {
                 .cornerRadius(20, corners: [.topLeft, .bottomLeft])
             images[activeImageIndex]
                 .resizable()
-                .onReceive(imageSwitchTimer) { _ in
-                        self.activeImageIndex = (self.activeImageIndex + 1) % images.count
-                    }
                 .frame(width: ScreenSize.width * 0.55, height: ScreenSize.height * 0.3)
                 .cornerRadius(20, corners: [.topRight, .bottomRight])
+                .onReceive(imageSwitchTimer) { _ in
+                    self.activeImageIndex = (self.activeImageIndex + 1) % images.count
+                }
         }
     }
 }
