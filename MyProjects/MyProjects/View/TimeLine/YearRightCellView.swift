@@ -1,19 +1,24 @@
 import SwiftUI
 
 struct YearRightCellView: View {
+    @State var activeImageIndex = 0
+    
+    @ObservedObject var viewModel = ProjectsListViewModel()
     
     var year: Int
+    let imageSwitchTimer = Timer.publish(every: 1, on: .main, in: .common)
+            .autoconnect()
     
     var body: some View {
+        let images = viewModel.getProjectsByYear(year).map{ $0.images.first! }
         HStack(spacing: 0) {
-            ZStack {
-                Rectangle()
-                    .foregroundColor(Color.blue)
-                Image(uiImage: UIImage(systemName: "photo")!)
-                    .resizable()
-            }
-            .frame(width: ScreenSize.width * 0.55, height: ScreenSize.height * 0.3)
-            .cornerRadius(20, corners: [.topLeft, .bottomLeft])
+            images[activeImageIndex]
+                .resizable()
+                .frame(width: ScreenSize.width * 0.55, height: ScreenSize.height * 0.3)
+                .cornerRadius(20, corners: [.topLeft, .bottomLeft])
+                .onReceive(imageSwitchTimer) { _ in
+                    self.activeImageIndex = (self.activeImageIndex + 1) % images.count
+                }
             Text(String(year))
                 .padding(8)
                 .font(.system(size: 60))

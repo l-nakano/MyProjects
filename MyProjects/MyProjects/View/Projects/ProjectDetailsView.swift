@@ -1,15 +1,22 @@
 import SwiftUI
 
 struct ProjectDetailsView: View {
+    @State var activeImageIndex = 0
+    
     let project: ProjectDetails
+    let imageSwitchTimer = Timer.publish(every: 2, on: .main, in: .common)
+            .autoconnect()
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            project.images.first!
+            project.images[activeImageIndex]
                 .resizable()
                 .frame(width: ScreenSize.width * 0.5)
                 .aspectRatio(227/185, contentMode: .fit)
                 .padding([.top, .bottom], 40)
+                .onReceive(imageSwitchTimer) { _ in
+                    self.activeImageIndex = (self.activeImageIndex + 1) % project.images.count
+                }
             Text(project.title)
                 .font(.largeTitle)
                 .bold()
