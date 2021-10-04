@@ -8,34 +8,10 @@ struct LinksStackView: View {
     
     var body: some View {
         HStack {
-            if store != "" {
-                LinkButtonView(systemImage: "bag.circle") {
-                    if let url = URL(string: store) {
-                        UIApplication.shared.open(url)
-                    }
-                }
-            }
-            if repository != "" {
-                LinkButtonView(systemImage: "hammer.circle") {
-                    if let url = URL(string: repository) {
-                        UIApplication.shared.open(url)
-                    }
-                }
-            }
-            if design != "" {
-                LinkButtonView(systemImage: "photo.circle") {
-                    if let url = URL(string: design) {
-                        UIApplication.shared.open(url)
-                    }
-                }
-            }
-            if video != "" {
-                LinkButtonView(systemImage: "play.circle") {
-                    if let url = URL(string: video) {
-                        UIApplication.shared.open(url)
-                    }
-                }
-            }
+            if store != "" { LinkButtonView(systemImage: "bag.circle", url: store) }
+            if repository != "" { LinkButtonView(systemImage: "hammer.circle", url: repository) }
+            if design != "" { LinkButtonView(systemImage: "photo.circle", url: design) }
+            if video != "" { LinkButtonView(systemImage: "play.circle", url: video) }
         }
         .frame(maxWidth: ScreenSize.width * 0.6, maxHeight: 50)
     }
