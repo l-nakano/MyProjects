@@ -16,7 +16,7 @@ struct ProjectsToolbarContentView: ToolbarContent {
         }
         ToolbarItem(placement: .navigationBarTrailing) {
             ToolbarButtonView(systemImage: "plus.circle") {
-                print("Adicionar")
+                showingScreen = .projectInsert
             }
         }
     }

@@ -13,7 +13,7 @@ struct TimeLineCollectionView: View {
                 YearsCollectionView
             }
             .toolbar {
-                MainToolbarContentView()
+                MainToolbarContentView(showingScreen: $showingScreen)
             }.navigationBarTitleDisplayMode(.inline)
         }
     }

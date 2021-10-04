@@ -8,8 +8,10 @@ struct PortfolioView: View {
         switch showingScreen {
         case .timeLine:
             AnyView(TimeLineCollectionView(showingScreen: $showingScreen, yearSelected: $selectedYear))
-        default:
+        case .projects:
             AnyView(ProjectsView(showingScreen: $showingScreen, selecetedYear: $selectedYear))
+        default:
+            AnyView(AddNewProject(showingScreen: $showingScreen))
         }
     }
 }
